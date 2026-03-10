@@ -115,7 +115,7 @@ export default function Contact() {
                       <label className="block text-sm font-medium text-foreground mb-1.5">Message</label>
                       <textarea
                         required
-                        rows={4}
+                        rows={3}
                         value={form.message}
                         onChange={e => setForm(prev => ({ ...prev, message: e.target.value }))}
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors resize-none"
