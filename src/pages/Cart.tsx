@@ -13,7 +13,7 @@ export default function Cart() {
         `${i + 1}. ${item.product.title} (${item.product.code}) x${item.quantity} — ${item.product.offerPrice * item.quantity} AED`
     );
     const message = `Hello! I'd like to order the following items from Eterna Accessories:\n\n${lines.join("\n")}\n\nTotal: ${totalPrice} AED\n\nPlease confirm availability and share payment details. Thank you!`;
-    const url = `https://wa.me/917204542727?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/971503033211?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
 

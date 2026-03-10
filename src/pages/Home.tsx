@@ -29,9 +29,6 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-2xl"
           >
-            <p className="text-gold text-sm tracking-[0.4em] uppercase mb-4 gold-shimmer bg-clip-text">
-              Forever Elegance
-            </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-cream font-bold leading-tight mb-6">
               Luxury Waterproof Jewelry{" "}
               <span className="gold-text">from Dubai</span>
