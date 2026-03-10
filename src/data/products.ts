@@ -118,9 +118,9 @@ export const categories: { name: string; slug: ProductCategory; image: string }[
   { name: "Necklaces", slug: "necklaces", image: "/images/cat-necklaces.jpg" },
   { name: "Bracelets", slug: "bracelets", image: "/images/cat-bracelets.jpg" },
   { name: "Earrings", slug: "earrings", image: "/images/cat-earrings.jpg" },
-  { name: "Rings", slug: "rings", image: "/images/cat-rings.jpg" },
-  { name: "Anklets", slug: "anklets", image: "/images/cat-anklets.jpg" },
-  { name: "Chains", slug: "chains", image: "/images/cat-chains.jpg" },
+  // { name: "Rings", slug: "rings", image: "/images/cat-rings.jpg" },
+  // { name: "Anklets", slug: "anklets", image: "/images/cat-anklets.jpg" },
+  // { name: "Chains", slug: "chains", image: "/images/cat-chains.jpg" },
   { name: "Best Sellers", slug: "best-sellers", image: "/images/hero-banner.jpg" },
 ];
 
