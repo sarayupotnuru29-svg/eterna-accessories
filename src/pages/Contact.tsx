@@ -2,10 +2,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Instagram, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
+import { products } from "@/data/products";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", productId: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,7 +21,7 @@ export default function Contact() {
     toast.success("Message sent successfully!");
     setTimeout(() => {
       setSubmitted(false);
-      setForm({ name: "", email: "", phone: "", message: "" });
+      setForm({ name: "", email: "", phone: "", productId: "", message: "" });
     }, 3000);
   };
 
@@ -111,6 +119,27 @@ export default function Contact() {
                         />
                       </div>
                     ))}
+
+                    {/* Product ID Dropdown */}
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-1.5">Product (Optional)</label>
+                      <Select
+                        value={form.productId}
+                        onValueChange={(value) => setForm(prev => ({ ...prev, productId: value }))}
+                      >
+                        <SelectTrigger className="w-full px-4 py-3 h-auto rounded-lg border border-border bg-background text-foreground focus:border-gold focus:ring-1 focus:ring-gold">
+                          <SelectValue placeholder="Select a product" />
+                        </SelectTrigger>
+                        <SelectContent className="max-h-60 bg-card border-border">
+                          {products.map(product => (
+                            <SelectItem key={product.id} value={product.code}>
+                              {product.code} — {product.title}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-1.5">Message</label>
                       <textarea
