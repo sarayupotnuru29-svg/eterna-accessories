@@ -110,7 +110,7 @@ export const products: Product[] = rawProducts.map((p, i) => {
     offerPrice: p.offer,
     originalPrice: p.original,
     category: cat,
-    image: getCategoryImage(cat),
+    image: `/images/products/${p.code}.jpg`,
   };
 });
 
