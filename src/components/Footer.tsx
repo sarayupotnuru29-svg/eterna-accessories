@@ -187,7 +187,7 @@ export default function Footer() {
               {/* Logo matches Navbar style exactly: no border, darkened filters */}
               <div className="relative">
                 <img 
-                  src="/images/eterna_logo.png" 
+                  src="/images/eterna_logo2.png" 
                   alt="Eterna Accessories" 
                   /* Filters match Navbar:
                     - brightness-90 for the rich gold look
